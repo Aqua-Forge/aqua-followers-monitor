@@ -1,0 +1,20 @@
+{
+  "name": "followers-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetch.ts",
+  "scripts": {
+    "followers": "npx ts-node fetch.ts followers",
+    "following": "npx ts-node fetch.ts following",
+    "compare": "python compare.py",
+    "first": "mkdir -p data && npx ts-node fetch.ts followers && cp data/followers.txt data/last_followers.txt",
+    "test": "npx ts-node fetch.ts followers && npx ts-node fetch.ts following && python compare.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
