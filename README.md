@@ -1,6 +1,6 @@
-<h1>Followers monitor</h1>
+<h1>Aqua Followers Monitor</h1>
 
-This Node/Python script allows you to monitor your followers/following in social media. The final version of this program should create detailed statistics about data available on your social media by using its REST API (if available).
+These Node/Python scripts allows you to monitor your followers/following in social media. The final version of this program should create detailed statistics about data available on many social media by using its REST API (if available).
 
 ---
 
