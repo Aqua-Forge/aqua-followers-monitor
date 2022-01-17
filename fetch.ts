@@ -15,6 +15,10 @@ var options = {
   headers: { "user-agent": "node.js" },
 };
 
+if (mode === "following") {
+  options.path += "?per_page=100";
+}
+
 const req = https.get(options, (res) => {
   if (configs.debug) console.log(`STATUS: ${res.statusCode}`);
 
