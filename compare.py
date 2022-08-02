@@ -20,6 +20,7 @@ with open(FOLLOWING) as f:
 
 lost = [follower for follower in last if follower not in current]
 dont_follow_back = [f for f in following if f not in current]
+you_dont_follow_back = [f for f in current if f not in following]
 new_followers = [f for f in current if f not in last]
 
 if (configs["resultToFile"]):
@@ -30,6 +31,10 @@ if (configs["resultToFile"]):
 
     f.write(f"\n- Dont follow you back ({len(dont_follow_back)}):\n\n")
     for d in dont_follow_back:
+      f.write(d + "\n")
+
+    f.write(f"\n- You dont follow back ({len(you_dont_follow_back)}):\n\n")
+    for d in you_dont_follow_back:
       f.write(d + "\n")
 
     f.write(f"\n- New folowers ({len(new_followers)}):\n\n")
