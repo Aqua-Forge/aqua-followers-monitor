@@ -10,14 +10,10 @@ var outFile = `data/${mode}.txt`;
 
 var options = {
   host: "api.github.com",
-  path: `/users/${configs.githubUser}/${mode}`,
+  path: `/users/${configs.githubUser}/${mode}?per_page=100`,
   method: "GET",
   headers: { "user-agent": "node.js" },
 };
-
-if (mode === "following") {
-  options.path += "?per_page=100";
-}
 
 const req = https.get(options, (res) => {
   if (configs.debug) console.log(`STATUS: ${res.statusCode}`);
